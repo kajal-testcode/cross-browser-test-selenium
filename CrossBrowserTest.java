@@ -52,15 +52,13 @@ public class CrossBrowserTest {
 	
 	@Test(alwaysRun=true)
 	public void testParameterWithXML() throws InterruptedException{
-		driver.get("http://demo.guru99.com/V4/");
-		//Find user name
-		WebElement userName = driver.findElement(By.name("uid"));
-		//Fill user name
-		userName.sendKeys("guru99");
-		//Find password
-		WebElement password = driver.findElement(By.name("password"));
-		//Fill password
-		password.sendKeys("guru99");
+		driver.get("https://www.facebook.com/");	
+
+		//Find email and fill it
+		driver.findElement(By.id("email")).sendKeys("testmail4dev@gmail.com");
+		
+		//Find password and fill it
+		driver.findElement(By.id("pass")).sendKeys("testmyapp");
 	}
 	
 	
